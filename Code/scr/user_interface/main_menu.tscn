@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scr/user_interface/_menu.gd" type="Script" id=3]
+[ext_resource path="res://scr/user_interface/menu_music.tscn" type="PackedScene" id=4]
+
+[node name="main_menu" type="CanvasLayer"]
+
+[node name="_menu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="menu_music" parent="_menu" instance=ExtResource( 4 )]
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="_menu"]
+margin_right = 426.0
+margin_bottom = 240.0
+color = Color( 0.113725, 0.129412, 0.172549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="_menu"]
+margin_left = 3.0
+margin_top = 223.0
+margin_right = 103.0
+margin_bottom = 243.0
+text = " v1.0.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="_menu"]
+margin_left = 132.0
+margin_top = 104.0
+margin_right = 291.0
+margin_bottom = 185.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jogar" type="Button" parent="_menu/VBoxContainer"]
+margin_right = 159.0
+margin_bottom = 20.0
+text = "Jogar"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="_menu/VBoxContainer/jogar" to="_menu" method="_on_jogar_pressed"]
