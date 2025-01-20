@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "actor",
-"language": "GDScript",
-"path": "res://scenes/player/actor.gd"
-}, {
 "base": "RigidBody2D",
 "class": "gate",
 "language": "GDScript",
@@ -64,13 +59,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/pedestals/pedestal_two_type_a.gd"
 }, {
-"base": "actor",
+"base": "KinematicBody2D",
 "class": "player",
 "language": "GDScript",
 "path": "res://scenes/player/player.gd"
 } ]
 _global_script_class_icons={
-"actor": "",
 "gate": "",
 "gate_and": "",
 "gate_nand": "",

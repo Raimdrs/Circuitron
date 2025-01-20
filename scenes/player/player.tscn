@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/player/player.gd" type="Script" id=1]
-[ext_resource path="res://assets/art/game/sprites/custom/light.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/audio/sfx/jump.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/art/game/sprites/spritesheet (1).png" type="Texture" id=4]
 
@@ -62,7 +61,6 @@ tracks/0/keys = {
 }
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 128, 74 )
 script = ExtResource( 1 )
 speed = Vector2( 150, 475 )
 
@@ -92,10 +90,6 @@ position = Vector2( 0, -25 )
 
 [node name="dialog" type="Position2D" parent="Camera2D"]
 position = Vector2( -120, -65 )
-
-[node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 2 )
-energy = 0.6
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
