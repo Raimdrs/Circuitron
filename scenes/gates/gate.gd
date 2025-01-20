@@ -18,7 +18,7 @@ func _ready():
 
 func _physics_process(_delta): 
 	if picked:
-		self.position = lerp(global_position,get_node("../player/Camera2D/Position2D").global_position,15 * _delta)
+		self.position = lerp(global_position, get_node("../player/LogicGatePosition").global_position,15 * _delta)
 		self.rotation = lerp_angle(self.rotation, 0, 15 * _delta)
 		anim_switch("select")
 		sleeping = true

@@ -62,7 +62,7 @@ position = Vector2( 360, 216 )
 
 [node name="player" parent="." groups=["player"] instance=ExtResource( 8 )]
 light_mask = 0
-position = Vector2( 28, 202 )
+position = Vector2( 31, 204 )
 
 [node name="gate_not" parent="." groups=["gate", "gates_not"] instance=ExtResource( 1 )]
 position = Vector2( 408, 105 )
