@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scr/actors/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/game/sprites/spritesheet (1).png" type="Texture" id=2]
+[ext_resource path="res://assets/art/game/sprites/custom/light.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/audio/sfx/jump.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.5
+height = 4.0
+
+[sub_resource type="Animation" id=2]
+length = 0.1
+loop = true
+
+[sub_resource type="Animation" id=3]
+length = 2.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame_coords")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 0.9, 1.1, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 16 ), Vector2( 1, 16 ), Vector2( 2, 16 ), Vector2( 3, 16 ), Vector2( 2, 16 ), Vector2( 1, 16 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame_coords")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 17 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 17 ), Vector2( 1, 17 ), Vector2( 2, 17 ), Vector2( 3, 17 ), Vector2( 4, 17 ), Vector2( 5, 17 ), Vector2( 6, 17 ), Vector2( 7, 17 ) ]
+}
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 128, 74 )
+script = ExtResource( 1 )
+speed = Vector2( 150, 475 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 4.17233e-06, 4 )
+scale = Vector2( 0.0381356, 0.05625 )
+texture = ExtResource( 2 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.50058, 1.49397 )
+shape = SubResource( 1 )
+
+[node name="animation" type="AnimationPlayer" parent="."]
+autoplay = "fall"
+anims/fall = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/jump = SubResource( 4 )
+anims/run = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
+[node name="Position2D" type="Position2D" parent="Camera2D"]
+position = Vector2( 0, -25 )
+
+[node name="dialog" type="Position2D" parent="Camera2D"]
+position = Vector2( -120, -65 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+energy = 0.6
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.0
