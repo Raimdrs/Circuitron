@@ -12,62 +12,62 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "actor",
 "language": "GDScript",
-"path": "res://scr/actors/actor.gd"
+"path": "res://scenes/player/actor.gd"
 }, {
-"base": "RigidBody2D",
+"base": "Reference",
 "class": "gate",
 "language": "GDScript",
-"path": "res://scr/objects/gate.gd"
+"path": "res://scenes/gates/gate.gd"
 }, {
 "base": "gate",
 "class": "gate_and",
 "language": "GDScript",
-"path": "res://scr/objects/gate_and.gd"
+"path": "res://scenes/gates/and/gate_and.gd"
 }, {
 "base": "gate",
 "class": "gate_nand",
 "language": "GDScript",
-"path": "res://scr/objects/gate_nand.gd"
+"path": "res://scenes/gates/nand/gate_nand.gd"
 }, {
 "base": "gate",
 "class": "gate_nor",
 "language": "GDScript",
-"path": "res://scr/objects/gate_nor.gd"
+"path": "res://scenes/gates/nor/gate_nor.gd"
 }, {
 "base": "gate",
 "class": "gate_not",
 "language": "GDScript",
-"path": "res://scr/objects/gate_not.gd"
+"path": "res://scenes/gates/not/gate_not.gd"
 }, {
 "base": "gate",
 "class": "gate_or",
 "language": "GDScript",
-"path": "res://scr/objects/gate_or.gd"
+"path": "res://scenes/gates/or/gate_or.gd"
 }, {
 "base": "gate",
 "class": "gate_xnor",
 "language": "GDScript",
-"path": "res://scr/objects/gate_xnor.gd"
+"path": "res://scenes/gates/xnor/gate_xnor.gd"
 }, {
 "base": "gate",
 "class": "gate_xor",
 "language": "GDScript",
-"path": "res://scr/objects/gate_xor.gd"
+"path": "res://scenes/gates/xor/gate_xor.gd"
 }, {
 "base": "Node2D",
 "class": "pedestal_three",
 "language": "GDScript",
-"path": "res://scr/objects/pedestal_three_type_a.gd"
+"path": "res://scenes/pedestals/pedestal_three_type_a.gd"
 }, {
 "base": "Node2D",
 "class": "pedestal_two",
 "language": "GDScript",
-"path": "res://scr/objects/pedestal_two_type_a.gd"
+"path": "res://scenes/pedestals/pedestal_two_type_a.gd"
 }, {
 "base": "actor",
 "class": "player",
 "language": "GDScript",
-"path": "res://scr/actors/player.gd"
+"path": "res://scenes/player/player.gd"
 } ]
 _global_script_class_icons={
 "actor": "",
@@ -87,7 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Circuitron - O Resgate do sistema"
-run/main_scene="res://scr/user_interface/main_menu.tscn"
+run/main_scene="res://scenes/ui/main_menu.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 config/quit_on_go_back=false
