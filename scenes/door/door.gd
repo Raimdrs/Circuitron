@@ -4,18 +4,13 @@ export (NodePath) var previous
 
 onready var time = $"Timer"
 
-
 var input
 
 func _physics_process(_delta):
 	input = get_node(previous).output
 
-	if input == true:
-		$Sprite.frame = 1
-		$CollisionShape2D.disabled = false
-	else:
-		$Sprite.frame = 0
-		$CollisionShape2D.disabled = true
+	$Sprite.frame = 1 if input else 0
+	$CollisionShape2D.disabled = not input
 
 func _on_door_body_entered(body) -> void:
 	if body.name == "player":

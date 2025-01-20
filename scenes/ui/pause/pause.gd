@@ -12,12 +12,8 @@ func _notification(what):
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		if get_tree().paused == false:
-			visible = true
-			get_tree().paused = true
-		else:
-			get_tree().paused = false
-			visible = false
+		visible = not get_tree().paused
+		get_tree().paused = not get_tree().paused
 
 func _on_retomar_pressed():
 	hide()
@@ -29,9 +25,5 @@ func _on_menu_pressed():
 	get_tree().change_scene("res://scr/user_interface/main_menu.tscn")
 
 func _on_Back_pressed():
-	if get_tree().paused == false:
-		visible = true
-		get_tree().paused = true
-	else:
-		get_tree().paused = false
-		visible = false
+	visible = not get_tree().paused
+	get_tree().paused = not get_tree().paused

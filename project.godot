@@ -9,12 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "actor",
 "language": "GDScript",
 "path": "res://scenes/player/actor.gd"
 }, {
-"base": "Reference",
+"base": "RigidBody2D",
 "class": "gate",
 "language": "GDScript",
 "path": "res://scenes/gates/gate.gd"
@@ -87,7 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Circuitron - O Resgate do sistema"
-run/main_scene="res://scenes/ui/main_menu.tscn"
+run/main_scene="res://scenes/ui/main_menu/main_menu.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 config/quit_on_go_back=false
