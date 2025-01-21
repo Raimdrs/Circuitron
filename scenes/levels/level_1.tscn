@@ -16,6 +16,7 @@
 [node name="Level1" type="Node"]
 
 [node name="background" parent="." instance=ExtResource( 5 )]
+follow_viewport_enable = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 12 )
