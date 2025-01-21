@@ -1,15 +1,15 @@
 extends Area2D
 
-export (NodePath) var previous
-
-onready var time = $"Timer"
+@export var previous: NodePath
+@export var destination: PackedScene
+@onready var time = $"Timer"
 
 var input
 
 func _physics_process(_delta):
 	input = get_node(previous).output
 
-	$Sprite.frame = 1 if input else 0
+	$Sprite2D.frame = 1 if input else 0
 	$CollisionShape2D.disabled = not input
 
 func _on_door_body_entered(body) -> void:
@@ -19,4 +19,4 @@ func _on_door_body_entered(body) -> void:
 		$music_level.playing = true
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://scenes/levels/level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+	get_tree().change_scene_to_packed(destination)

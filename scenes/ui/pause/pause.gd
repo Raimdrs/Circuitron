@@ -5,9 +5,9 @@ func _ready():
 	visible = false
 
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
 		_on_Back_pressed()
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		_on_Back_pressed()
 
 func _process(_delta):
@@ -22,7 +22,7 @@ func _on_retomar_pressed():
 
 func _on_menu_pressed():
 	get_tree().paused = false
-	get_tree().change_scene("res://scr/user_interface/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scr/user_interface/main_menu.tscn")
 
 func _on_Back_pressed():
 	visible = not get_tree().paused

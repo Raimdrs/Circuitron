@@ -11,7 +11,7 @@ var gates_nor
 var gates_xor
 var gates_xnor
 
-export var input = true
+@export var input = true
 var output 
 
 var busy = true

@@ -1,9 +1,9 @@
-class_name player extends KinematicBody2D
+class_name player extends CharacterBody2D
 
-onready var animated_sprite = $AnimatedSprite
+@onready var animated_sprite = $AnimatedSprite2D
 
-export var speed = Vector2(130.0, 500.0)
-onready var gravity = ProjectSettings.get("physics/2d/default_gravity")
+@export var speed = Vector2(130.0, 500.0)
+@onready var gravity = ProjectSettings.get("physics/2d/default_gravity")
 
 var can_pick = true
 var _velocity = Vector2.ZERO
@@ -24,7 +24,10 @@ func _physics_process(delta):
 	else:
 		anim_switch("idle")
 		_velocity.x = move_toward(_velocity.x, 0, speed.x)
-	_velocity = move_and_slide(_velocity, Vector2.UP)
+	set_velocity(_velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	_velocity = velocity
 
 func anim_switch(animation):
 	var new_anim = str(animation)

@@ -11,10 +11,10 @@ func _notification(what):
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().change_scene("res://scr/user_interface/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scr/user_interface/main_menu.tscn")
 
 func _on_retornar_pressed():
-	get_tree().change_scene("res://scr/user_interface/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scr/user_interface/main_menu.tscn")
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://scr/user_interface/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scr/user_interface/main_menu.tscn")

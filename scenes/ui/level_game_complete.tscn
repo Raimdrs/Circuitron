@@ -6,8 +6,8 @@
 [node name="logo" type="CanvasLayer"]
 
 [node name="_logo" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="_logo"]
@@ -16,22 +16,22 @@ one_shot = true
 autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="_logo"]
-margin_right = 426.0
-margin_bottom = 240.0
+offset_right = 426.0
+offset_bottom = 240.0
 color = Color( 0.113725, 0.129412, 0.172549, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="_logo"]
-margin_right = 424.0
-margin_bottom = 184.0
+offset_right = 424.0
+offset_bottom = 184.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="_logo/CenterContainer"]
-margin_left = 76.0
-margin_top = 51.0
-margin_right = 348.0
-margin_bottom = 133.0
+offset_left = 76.0
+offset_top = 51.0
+offset_right = 348.0
+offset_bottom = 133.0
 text = "Parabéns! 
 Todas as portas lógicas foram instaladas... 
 Parece que esse é o fim...

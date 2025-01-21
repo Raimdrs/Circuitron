@@ -1,7 +1,7 @@
 extends TileMap
 
 
-export (NodePath) var previous
+@export var previous: NodePath
 
 var input
 

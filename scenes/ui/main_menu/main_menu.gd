@@ -3,9 +3,9 @@ extends Control
 var timer
 
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
 		_on_Back_pressed()
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		_on_Back_pressed()
 
 func ready():
@@ -14,7 +14,7 @@ func ready():
 	timer.start()
 
 func _on_jogar_pressed():
-	get_tree().change_scene("res://scenes/levels/level_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 
 func _on_Back_pressed():
 	get_tree().quit()

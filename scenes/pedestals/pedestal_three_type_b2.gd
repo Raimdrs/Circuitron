@@ -1,6 +1,6 @@
 extends pedestal_three 
 
-export (NodePath) var previous
+@export var previous: NodePath
 
 func _process(_delta):
 	input_2 = get_node(previous).output

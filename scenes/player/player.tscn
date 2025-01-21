@@ -1,68 +1,75 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://u1q714ygtk2y"]
 
-[ext_resource path="res://scenes/player/player.gd" type="Script" id=1]
-[ext_resource path="res://assets/audio/sfx/jump.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/art/game/sprites/spritesheet (1).png" type="Texture" id=4]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://boj1aer1pih3i" path="res://assets/audio/sfx/jump.wav" id="3"]
+[ext_resource type="Texture2D" uid="uid://dbvo8ak7k1oyk" path="res://assets/art/game/sprites/spritesheet (1).png" id="4"]
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 16, 32 )
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("4")
+region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 16, 32 )
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("4")
+region = Rect2(32, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 4 )
-region = Rect2( 48, 0, 16, 32 )
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("4")
+region = Rect2(48, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 4 )
-region = Rect2( 16, 0, 16, 32 )
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("4")
+region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ SubResource( 2 ) ],
+[sub_resource type="SpriteFrames" id="6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}],
 "loop": true,
-"name": "idle",
+"name": &"idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}],
 "loop": true,
-"name": "run",
+"name": &"run",
 "speed": 6.0
-} ]
+}]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 8.0
-height = 13.0
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 7.0
+height = 29.0
 
-[node name="player" type="KinematicBody2D"]
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-speed = Vector2( 150, 475 )
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1")
+speed = Vector2(150, 475)
 
-[node name="LogicGatePosition" type="Position2D" parent="."]
-position = Vector2( 0, -25 )
+[node name="LogicGatePosition" type="Marker2D" parent="."]
+position = Vector2(0, -25)
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 6 )
-animation = "idle"
-playing = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("6")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1.5 )
-shape = SubResource( 1 )
+position = Vector2(0, 1.5)
+shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.3, 0.3 )
+zoom = Vector2(3, 3)
 
-[node name="dialog" type="Position2D" parent="Camera2D"]
-position = Vector2( -120, -65 )
+[node name="dialog" type="Marker2D" parent="Camera2D"]
+position = Vector2(-120, -65)
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 volume_db = -25.0

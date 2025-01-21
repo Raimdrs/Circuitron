@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/art/game/sprites/custom/gate_and.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/game/sprites/custom/gate_and.png" type="Texture2D" id=1]
 [ext_resource path="res://scenes/gates/and/gate_and.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/sfx/select.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/audio/sfx/drop.wav" type="AudioStream" id=5]
@@ -23,7 +23,7 @@ collision_mask = 2147483650
 gravity_scale = 2.0
 script = ExtResource( 2 )
 
-[node name="sprite_gate" type="Sprite" parent="."]
+[node name="sprite_gate" type="Sprite2D" parent="."]
 light_mask = 2
 position = Vector2( 0, -1 )
 texture = ExtResource( 1 )

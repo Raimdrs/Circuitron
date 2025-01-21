@@ -9,12 +9,12 @@ var detector
 var droped
 var button
 
-onready var animation_player = $animation
+@onready var animation_player = $animation
 
 func _ready():
 	gates = get_tree().get_nodes_in_group("gate")
 	pedestal_nodes = get_tree().get_nodes_in_group("pedestal")
-	pedestal_dock = pedestal_nodes[0].get_node("Position2D").global_position
+	pedestal_dock = pedestal_nodes[0].get_node("Marker2D").global_position
 
 func _physics_process(_delta): 
 	if picked:
@@ -53,9 +53,9 @@ func _input(_event):
 
 	for child in pedestal_nodes:
 		var shortest_dist = 30
-		var distance = global_position.distance_to(child.get_node("Position2D").global_position)
+		var distance = global_position.distance_to(child.get_node("Marker2D").global_position)
 		if distance < shortest_dist:
-			pedestal_dock = child.get_node("Position2D").global_position
+			pedestal_dock = child.get_node("Marker2D").global_position
 			detector = child.get_node("detector").get_overlapping_bodies()
 			for objects in detector: 
 				for _gate in gates:
