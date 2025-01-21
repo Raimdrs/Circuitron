@@ -13,26 +13,24 @@ var _velocity = Vector2.ZERO
 func _physics_process(_delta):
 	_velocity.y += gravity * _delta
 	var friction = false
-
-	if Input.is_action_pressed("ui_right"):
-		_velocity.x = min(_velocity.x + ACCELERATION, speed.x)
-		anim_switch("run")
-		animated_sprite.flip_h = false
-	elif Input.is_action_pressed("ui_left"):
-		_velocity.x = max(_velocity.x - ACCELERATION, -speed.x)
-		anim_switch("run")
-		animated_sprite.flip_h = true
-	else:
+	
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
+	if direction.x == 0:
 		anim_switch("idle")
 		friction = true
-
-	if is_on_floor(): 
+	else:
+		anim_switch("run")
+		animated_sprite.flip_h = direction == -1
+	
+	_velocity.x = clamp(_velocity.x + direction.x * ACCELERATION, -speed.x, speed.x)
+	
+	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
 			_velocity.y = -speed.y
 			$jump.play()
 		if friction:
 			_velocity.x = lerp(_velocity.x , 0, 0.2)
-	else: 
+	else:
 		if _velocity.y > 0:
 			anim_switch("fall")
 		else:
