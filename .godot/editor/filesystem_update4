@@ -1,7 +1,5 @@
 res://scenes/ui/main_menu/main_menu.tscn
-res://scenes/ui/main_menu/main_menu.gd
-res://scenes/ui/pause/pause.gd
-res://scenes/levels/level_1.tscn
 res://assets/art/game/tileset/game.tres
-res://scenes/door/door.gd
-res://scenes/player/player.tscn
+res://scenes/levels/level_1.tscn
+res://scenes/gates/not/gate_not.tscn
+res://scenes/gates/gate.gd
