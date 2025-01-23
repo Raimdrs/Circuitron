@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://u1q714ygtk2y"]
+[gd_scene load_steps=23 format=3 uid="uid://u1q714ygtk2y"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://08mbhgvbgg04" path="res://assets/art/game/sprites/death_explosion.png" id="2_jad8q"]
+[ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui.tscn" id="2_xvbum"]
 [ext_resource type="AudioStream" uid="uid://boj1aer1pih3i" path="res://assets/audio/sfx/jump.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://dbvo8ak7k1oyk" path="res://assets/art/game/sprites/spritesheet (1).png" id="4"]
 
@@ -132,6 +133,8 @@ height = 28.0
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1")
 speed = Vector2(150, 475)
+
+[node name="PlayerGUI" parent="." instance=ExtResource("2_xvbum")]
 
 [node name="LogicGatePosition" type="Marker2D" parent="."]
 position = Vector2(0, -25)
