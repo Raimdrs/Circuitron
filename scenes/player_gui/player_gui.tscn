@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt1bf3j0fg2co"]
 
-[ext_resource type="Script" path="res://scenes/player_gui.gd" id="1_xbaf7"]
+[ext_resource type="Script" path="res://scenes/player_gui/player_gui.gd" id="1_xbaf7"]
 [ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/fonts/Monocraft.ttc" id="2_xsoqe"]
 
 [node name="PlayerGUI" type="CanvasLayer"]

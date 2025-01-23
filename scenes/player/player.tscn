@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://08mbhgvbgg04" path="res://assets/art/game/sprites/death_explosion.png" id="2_jad8q"]
-[ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui.tscn" id="2_xvbum"]
+[ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui/player_gui.tscn" id="2_xvbum"]
 [ext_resource type="AudioStream" uid="uid://boj1aer1pih3i" path="res://assets/audio/sfx/jump.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://dbvo8ak7k1oyk" path="res://assets/art/game/sprites/spritesheet (1).png" id="4"]
 
@@ -127,8 +127,7 @@ radius = 7.0
 height = 29.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkh2y"]
-radius = 6.0
-height = 28.0
+radius = 8.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1")
