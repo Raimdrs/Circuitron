@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://u1q714ygtk2y"]
+[gd_scene load_steps=22 format=3 uid="uid://u1q714ygtk2y"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://08mbhgvbgg04" path="res://assets/art/game/sprites/death_explosion.png" id="2_jad8q"]
-[ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui/player_gui.tscn" id="2_xvbum"]
 [ext_resource type="AudioStream" uid="uid://boj1aer1pih3i" path="res://assets/audio/sfx/jump.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://dbvo8ak7k1oyk" path="res://assets/art/game/sprites/spritesheet (1).png" id="4"]
 
@@ -124,30 +123,31 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 7.0
-height = 29.0
+height = 22.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkh2y"]
-radius = 8.0
+radius = 7.0
+height = 24.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1")
 speed = Vector2(150, 475)
 
-[node name="PlayerGUI" parent="." instance=ExtResource("2_xvbum")]
-
 [node name="LogicGatePosition" type="Marker2D" parent="."]
 position = Vector2(0, -25)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.5, 4.5)
+scale = Vector2(0.8125, 0.71875)
 sprite_frames = SubResource("6")
-animation = &"death"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
+position = Vector2(-2, 5)
 shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(6, 6.5)
 
 [node name="dialog" type="Marker2D" parent="Camera2D"]
 position = Vector2(-120, -65)
@@ -161,7 +161,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
-position = Vector2(0, 1.5)
+position = Vector2(-2, 5)
 shape = SubResource("CapsuleShape2D_qkh2y")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,66 +1,62 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://bwxiui6rmn8bh"]
 
-[ext_resource path="res://assets/art/game/sprites/custom/pedestal_three.png" type="Texture2D" id=1]
-[ext_resource path="res://scenes/pedestals/pedestal_three_type_b.gd" type="Script" id=2]
-[ext_resource path="res://assets/art/game/sprites/custom/alert.png" type="Texture2D" id=3]
+[ext_resource type="Texture2D" uid="uid://cljvi61c2odbm" path="res://assets/art/game/sprites/custom/pedestal_three.png" id="1"]
+[ext_resource type="Script" path="res://scenes/pedestals/pedestal_three_type_b.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dk0tac3blbtd4" path="res://assets/art/game/sprites/custom/alert.png" id="3"]
 
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(48, 28)
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 14 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(16, 13)
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 6.5 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 8, 4.5 )
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(16, 9)
 
 [node name="pedestal_three_type_b" type="Node2D"]
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource("2")
 
 [node name="sprite_pedestal" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 vframes = 6
 
 [node name="sprite_input_a" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 vframes = 6
 
 [node name="sprite_input_b" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 vframes = 6
 
 [node name="sprite_output" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 vframes = 6
 
 [node name="sprite_alert" type="Sprite2D" parent="."]
-position = Vector2( 8, -16 )
-texture = ExtResource( 3 )
+position = Vector2(8, -16)
+texture = ExtResource("3")
 
 [node name="detector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
-position = Vector2( 0, -6 )
-shape = SubResource( 1 )
+position = Vector2(0, -6)
+shape = SubResource("1")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 1.497 )
-shape = SubResource( 2 )
+position = Vector2(0, 1.497)
+shape = SubResource("2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, 3.5 )
-shape = SubResource( 3 )
+position = Vector2(0, 3.5)
+shape = SubResource("3")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2( 0, -8 )
+position = Vector2(0, -8)

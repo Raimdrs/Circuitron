@@ -1,52 +1,58 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://cajp6h3h0p3lh"]
 
-[ext_resource path="res://assets/art/game/sprites/custom/gate_or.png" type="Texture2D" id=1]
-[ext_resource path="res://scenes/gates/or/gate_or.gd" type="Script" id=2]
-[ext_resource path="res://assets/audio/sfx/select.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/audio/sfx/drop.wav" type="AudioStream" id=5]
+[ext_resource type="Texture2D" uid="uid://bna7kfbe0d1rh" path="res://assets/art/game/sprites/custom/gate_or.png" id="1"]
+[ext_resource type="Script" path="res://scenes/gates/or/gate_or.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cq7bx7jc1btc5" path="res://assets/audio/sfx/select.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://1wfxsvyobdh" path="res://assets/audio/sfx/drop.wav" id="5"]
 
-
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "select"
 length = 2.0
-loop = true
+loop_mode = 1
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7, 7 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gwbmq"]
+_data = {
+"select": SubResource("1")
+}
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(14, 14)
+
+[sub_resource type="CircleShape2D" id="3"]
 radius = 11.0
 
 [node name="gate_or" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
 gravity_scale = 2.0
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="sprite_gate" type="Sprite2D" parent="."]
-position = Vector2( 0, -1 )
-texture = ExtResource( 1 )
+position = Vector2(0, -1)
+texture = ExtResource("1")
 vframes = 4
 
 [node name="animation" type="AnimationPlayer" parent="."]
-anims/select = SubResource( 1 )
+libraries = {
+"": SubResource("AnimationLibrary_gwbmq")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
-position = Vector2( -0.0001875, 0 )
-shape = SubResource( 2 )
+position = Vector2(-0.0001875, 0)
+shape = SubResource("2")
 
 [node name="detector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
 light_mask = 3
-position = Vector2( 0, -0.5 )
-shape = SubResource( 3 )
+position = Vector2(0, -0.5)
+shape = SubResource("3")
 
 [node name="select" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 volume_db = -10.0
 
 [node name="drop" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 volume_db = -25.0
