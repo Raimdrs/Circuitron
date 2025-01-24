@@ -45,6 +45,10 @@ region = Rect2(256, 0, 32, 32)
 atlas = ExtResource("2_jad8q")
 region = Rect2(288, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("4")
+region = Rect2(16, 0, 16, 32)
+
 [sub_resource type="AtlasTexture" id="2"]
 atlas = ExtResource("4")
 region = Rect2(0, 0, 16, 32)
@@ -56,10 +60,6 @@ region = Rect2(32, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="4"]
 atlas = ExtResource("4")
 region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="5"]
-atlas = ExtResource("4")
-region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="6"]
 animations = [{
@@ -100,6 +100,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("5")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("2")
 }],
 "loop": true,
@@ -107,6 +115,17 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("3")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
 "duration": 1.0,
 "texture": SubResource("3")
 }, {
@@ -140,7 +159,7 @@ position = Vector2(0, -25)
 position = Vector2(-1.5, 4.5)
 scale = Vector2(0.8125, 0.71875)
 sprite_frames = SubResource("6")
-animation = &"idle"
+animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 5)
