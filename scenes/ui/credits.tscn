@@ -1,21 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://buwnbmwk68d83"]
+[gd_scene load_steps=6 format=3 uid="uid://buwnbmwk68d83"]
 
 [ext_resource type="Script" path="res://scenes/ui/_credits.gd" id="2"]
-[ext_resource type="FontFile" uid="uid://cwg340h4dsiow" path="res://assets/tema/fontes/kenney_mini_square.ttf" id="2_qm3rr"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="2_umulp"]
 
 [sub_resource type="Theme" id="Theme_lbuuf"]
-default_font = ExtResource("2_qm3rr")
+default_font = ExtResource("2_umulp")
 default_font_size = 70
 
 [sub_resource type="Theme" id="Theme_qkcxc"]
-default_font = ExtResource("2_qm3rr")
+default_font = ExtResource("2_umulp")
 default_font_size = 100
 
 [sub_resource type="Theme" id="Theme_ximf6"]
-default_font = ExtResource("2_qm3rr")
+default_font = ExtResource("2_umulp")
 default_font_size = 100
-
-[sub_resource type="Theme" id="Theme_0ruq4"]
 
 [node name="credits" type="CanvasLayer"]
 
@@ -62,7 +60,7 @@ text = "Créditos"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = -1
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -77,7 +75,6 @@ theme = SubResource("Theme_ximf6")
 
 [node name="retornar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_0ruq4")
 text = "Voltar ao menu principal"
 
 [connection signal="pressed" from="VBoxContainer/retornar" to="_credits" method="_on_retornar_pressed"]

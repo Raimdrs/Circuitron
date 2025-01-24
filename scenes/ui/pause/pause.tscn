@@ -1,19 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bunhwyfvgljtn"]
+[gd_scene load_steps=5 format=3 uid="uid://bunhwyfvgljtn"]
 
 [ext_resource type="Script" path="res://scenes/ui/pause/pause.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://cwg340h4dsiow" path="res://assets/tema/fontes/kenney_mini_square.ttf" id="2_ydgn4"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="2_smots"]
 
-[sub_resource type="Theme" id="Theme_qutv1"]
-default_font = ExtResource("2_ydgn4")
+[sub_resource type="Theme" id="Theme_a2v30"]
+default_font = ExtResource("2_smots")
 default_font_size = 100
 
-[sub_resource type="Theme" id="Theme_t4ba6"]
-default_font = ExtResource("2_ydgn4")
-default_font_size = 70
-
-[sub_resource type="Theme" id="Theme_ctkit"]
-default_font = ExtResource("2_ydgn4")
-default_font_size = 70
+[sub_resource type="Theme" id="Theme_s0xvx"]
+default_font = ExtResource("2_smots")
+default_font_size = 50
 
 [node name="pause" type="CanvasLayer"]
 
@@ -39,7 +35,7 @@ offset_bottom = 184.0
 [node name="Label" type="Label" parent="pause/CenterContainer"]
 layout_direction = 1
 layout_mode = 2
-theme = SubResource("Theme_qutv1")
+theme = SubResource("Theme_a2v30")
 text = "Menu de pausa"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -48,19 +44,21 @@ vertical_alignment = 1
 light_mask = -2147483647
 layout_mode = 0
 offset_left = 470.0
-offset_top = 552.0
-offset_right = 1388.0
-offset_bottom = 957.0
+offset_top = 430.0
+offset_right = 1468.0
+offset_bottom = 870.0
+theme = SubResource("Theme_s0xvx")
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="retomar" type="Button" parent="pause/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_t4ba6")
+size_flags_vertical = 3
 text = "Retomar partida"
 
 [node name="menu" type="Button" parent="pause/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_ctkit")
+size_flags_vertical = 3
 text = "Voltar ao menu principal"
 
 [connection signal="pressed" from="pause/VBoxContainer/retomar" to="pause" method="_on_retomar_pressed"]
