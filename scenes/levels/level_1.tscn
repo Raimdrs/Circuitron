@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cnul061t617fs"]
+[gd_scene load_steps=15 format=4 uid="uid://cnul061t617fs"]
 
 [ext_resource type="PackedScene" uid="uid://bgtgbs23owj13" path="res://scenes/gates/not/gate_not.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://b1f7dphaduayt" path="res://scenes/pedestals/pedestal_two_type_a.tscn" id="2"]
@@ -13,6 +13,7 @@
 [ext_resource type="TileSet" uid="uid://do45h5yqe64i7" path="res://assets/art/game/tileset/game.tres" id="12"]
 [ext_resource type="PackedScene" path="res://scenes/gates/and/gate_and.tscn" id="12_h1ln7"]
 [ext_resource type="PackedScene" uid="uid://cajp6h3h0p3lh" path="res://scenes/gates/or/gate_or.tscn" id="13_w7hsy"]
+[ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint.tscn" id="14_evb1s"]
 
 [node name="Level1" type="Node"]
 
@@ -83,5 +84,16 @@ horizontal_alignment = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="pause" parent="." instance=ExtResource("9")]
+
+[node name="Checkpoint" parent="." instance=ExtResource("14_evb1s")]
+position = Vector2(75, 211)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("14_evb1s")]
+position = Vector2(217, 212)
+
+[connection signal="area_entered" from="Checkpoint" to="player" method="_on_checkpoint_area_entered"]
+[connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]
+[connection signal="area_entered" from="Checkpoint2" to="player" method="_on_checkpoint_area_entered"]
+[connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]
 
 [editable path="dialog_text"]

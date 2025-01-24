@@ -3,6 +3,8 @@ extends Node
 var time_elapsed := 0.0
 var is_time_stopped := false
 
+var respawn_point = null
+
 func _process(delta):
 	if !is_time_stopped:
 		time_elapsed += delta

@@ -51,9 +51,17 @@ func _physics_process(delta):
 # Função chamada quando a animação termina
 func _on_animated_sprite_2d_animation_finished():
 	if animated_sprite.animation == "death":
-		get_tree().reload_current_scene()
+		if Globals.respawn_point == null:
+			get_tree().reload_current_scene()
+		else:
+			position = Globals.respawn_point
+			animated_sprite.play("idle")
+			alive = true
 
 # Função chamada ao entrar em uma área de dano
 func _on_damage_area_body_entered(_body):
 	animated_sprite.play("death")
 	alive = false
+
+func _on_checkpoint_entered_checkpoint(pos):
+	Globals.respawn_point = pos
