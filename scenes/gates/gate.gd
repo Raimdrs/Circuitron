@@ -18,7 +18,7 @@ func _ready():
 
 func _physics_process(_delta): 
 	if picked:
-		self.position = lerp(global_position, get_node("../player/LogicGatePosition").global_position,15 * _delta)
+		self.position = lerp(global_position, get_node("../../player/LogicGatePosition").global_position,15 * _delta)
 		self.rotation = lerp_angle(self.rotation, 0, 15 * _delta)
 		anim_switch("select")
 		sleeping = true
@@ -40,15 +40,15 @@ func _input(_event):
 
 	if Input.is_action_just_pressed("ui_action") and button:
 		for body in bodies:
-			if body.name == "player" and get_node("../player").can_pick:
+			if body.name == "player" and get_node("../../player").can_pick:
 				picked = true
-				get_node("../player").can_pick = false
+				get_node("../../player").can_pick = false
 				$select.play()
 
 	if Input.is_action_just_pressed("ui_action") and picked and not button:
 		$drop.play()
 		picked = false
-		get_node("../player").can_pick = true
+		get_node("../../player").can_pick = true
 		button = true
 
 	for child in pedestal_nodes:

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxcx160505lnw"]
+
+[ext_resource type="Script" path="res://moving_platform.gd" id="1_ge3w1"]
+[ext_resource type="Texture2D" uid="uid://bt8c3cn62d70n" path="res://assets/art/game/sprites/tileset.png" id="2_o2ebn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8yqb"]
+atlas = ExtResource("2_o2ebn")
+region = Rect2(96, 123, 16, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6qdm"]
+size = Vector2(16, 5)
+
+[node name="MovingPlatform" type="AnimatableBody2D"]
+script = ExtResource("1_ge3w1")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_h8yqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d6qdm")
+one_way_collision = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cnul061t617fs"]
+[gd_scene load_steps=16 format=4 uid="uid://cnul061t617fs"]
 
 [ext_resource type="PackedScene" uid="uid://bgtgbs23owj13" path="res://scenes/gates/not/gate_not.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://b1f7dphaduayt" path="res://scenes/pedestals/pedestal_two_type_a.tscn" id="2"]
@@ -14,11 +14,15 @@
 [ext_resource type="PackedScene" path="res://scenes/gates/and/gate_and.tscn" id="12_h1ln7"]
 [ext_resource type="PackedScene" uid="uid://cajp6h3h0p3lh" path="res://scenes/gates/or/gate_or.tscn" id="13_w7hsy"]
 [ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint.tscn" id="14_evb1s"]
+[ext_resource type="PackedScene" uid="uid://bxcx160505lnw" path="res://moving_platform.tscn" id="15_drist"]
 
 [node name="Level1" type="Node"]
 
 [node name="background" parent="." instance=ExtResource("5")]
 follow_viewport_enabled = true
+
+[node name="Checkpoint2" parent="." instance=ExtResource("14_evb1s")]
+position = Vector2(211, 208)
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -35,35 +39,9 @@ position = Vector2(1833, 208)
 previous = NodePath("../pedestal_two_type_a")
 destination = ExtResource("6_nl0qk")
 
-[node name="sign" parent="." instance=ExtResource("7")]
-position = Vector2(40, 216)
-
-[node name="sign2" parent="." instance=ExtResource("7")]
-position = Vector2(1776, 136)
-
-[node name="sign4" parent="." instance=ExtResource("7")]
-position = Vector2(1609, 392)
-
-[node name="sign5" parent="." instance=ExtResource("7")]
-position = Vector2(1490, 216)
-
 [node name="player" parent="." groups=["player"] instance=ExtResource("8")]
 light_mask = 0
-position = Vector2(31, 204)
-
-[node name="gate_not" parent="." groups=["gate", "gates_not"] instance=ExtResource("1")]
-position = Vector2(1737, 393)
-
-[node name="gate_not2" parent="gate_not" groups=["gate", "gates_not"] instance=ExtResource("1")]
-visible = false
-position = Vector2(-96, -56)
-collision_mask = 2147483650
-
-[node name="gate_or" parent="." groups=["gate", "gates_or"] instance=ExtResource("13_w7hsy")]
-position = Vector2(1839, 121)
-
-[node name="gate_and" parent="." groups=["gate", "gates_and"] instance=ExtResource("12_h1ln7")]
-position = Vector2(1693, 393)
+position = Vector2(250, 187)
 
 [node name="pedestal_two_type_a" parent="." groups=["pedestal"] instance=ExtResource("2")]
 position = Vector2(1720, 216)
@@ -71,7 +49,7 @@ input = false
 
 [node name="dialog_text" parent="." instance=ExtResource("3")]
 position = Vector2(-240, -40)
-previous = NodePath("../sign")
+previous = NodePath("../Signs/sign")
 
 [node name="Panel" parent="dialog_text" index="0"]
 metadata/_edit_use_anchors_ = true
@@ -84,15 +62,49 @@ horizontal_alignment = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="pause" parent="." instance=ExtResource("9")]
+visible = false
 
-[node name="Checkpoint" parent="." instance=ExtResource("14_evb1s")]
-position = Vector2(75, 211)
+[node name="Gates" type="Node" parent="."]
 
-[node name="Checkpoint2" parent="." instance=ExtResource("14_evb1s")]
-position = Vector2(217, 212)
+[node name="gate_not" parent="Gates" groups=["gate", "gates_not"] instance=ExtResource("1")]
+position = Vector2(1737, 393)
 
-[connection signal="area_entered" from="Checkpoint" to="player" method="_on_checkpoint_area_entered"]
-[connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]
+[node name="gate_not2" parent="Gates/gate_not" groups=["gate", "gates_not"] instance=ExtResource("1")]
+visible = false
+position = Vector2(-96, -56)
+collision_mask = 2147483650
+
+[node name="gate_or" parent="Gates" groups=["gate", "gates_or"] instance=ExtResource("13_w7hsy")]
+position = Vector2(1839, 121)
+
+[node name="gate_and" parent="Gates" groups=["gate", "gates_and"] instance=ExtResource("12_h1ln7")]
+position = Vector2(1693, 393)
+
+[node name="Signs" type="Node" parent="."]
+
+[node name="sign" parent="Signs" instance=ExtResource("7")]
+position = Vector2(40, 216)
+
+[node name="sign2" parent="Signs" instance=ExtResource("7")]
+position = Vector2(1776, 136)
+
+[node name="sign4" parent="Signs" instance=ExtResource("7")]
+position = Vector2(1609, 392)
+
+[node name="sign5" parent="Signs" instance=ExtResource("7")]
+position = Vector2(1490, 216)
+
+[node name="MovingPlatform_1" parent="." node_paths=PackedStringArray("start", "end") instance=ExtResource("15_drist")]
+position = Vector2(248, 214)
+start = NodePath("../Start")
+end = NodePath("../End")
+
+[node name="Start" type="Marker2D" parent="."]
+position = Vector2(248, 214)
+
+[node name="End" type="Marker2D" parent="."]
+position = Vector2(381, 150)
+
 [connection signal="area_entered" from="Checkpoint2" to="player" method="_on_checkpoint_area_entered"]
 [connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]
 
