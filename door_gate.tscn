@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d32740mw5glrv"]
+[gd_scene load_steps=9 format=3 uid="uid://d32740mw5glrv"]
 
 [ext_resource type="Texture2D" uid="uid://bwx0lluqkouk5" path="res://assets/art/game/sprites/door_gate.png" id="1_aovqm"]
+[ext_resource type="Script" path="res://door_gate.gd" id="1_vghxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_diguu"]
 atlas = ExtResource("1_aovqm")
@@ -27,7 +28,21 @@ animations = [{
 "texture": SubResource("AtlasTexture_1d2dj")
 }],
 "loop": false,
-"name": &"default",
+"name": &"abrir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d2dj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5thvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diguu")
+}],
+"loop": false,
+"name": &"fechar",
 "speed": 5.0
 }]
 
@@ -38,9 +53,11 @@ size = Vector2(16, 16)
 size = Vector2(16, 32)
 
 [node name="DoorGate" type="StaticBody2D"]
+script = ExtResource("1_vghxc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pa7jj")
+animation = &"abrir"
 
 [node name="TopCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -16)
