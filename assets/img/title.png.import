@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cootihijkkugn"
-path="res://.godot/imported/gate_xor.png-e92408ea3cbc4191a3f4f1afc384d7b2.ctex"
+uid="uid://cl760rh0cvro5"
+path="res://.godot/imported/title.png-c1faf98b642331a0d9e17947c68bae1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/gate_xor.png"
-dest_files=["res://.godot/imported/gate_xor.png-e92408ea3cbc4191a3f4f1afc384d7b2.ctex"]
+source_file="res://assets/img/title.png"
+dest_files=["res://.godot/imported/title.png-c1faf98b642331a0d9e17947c68bae1d.ctex"]
 
 [params]
 

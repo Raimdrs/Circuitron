@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bunhwyfvgljtn"]
 
 [ext_resource type="Script" path="res://scenes/ui/pause/pause.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="2_smots"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/font/Monocraft.ttc" id="2_smots"]
 
 [sub_resource type="Theme" id="Theme_a2v30"]
 default_font = ExtResource("2_smots")

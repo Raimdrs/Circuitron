@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cljvi61c2odbm"
-path="res://.godot/imported/pedestal_three.png-b33b5a9e65540c28c0e88ede22eb0359.ctex"
+uid="uid://08mbhgvbgg04"
+path="res://.godot/imported/death_explosion.png-883f6d27205b838b202fc196ea2fb231.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/pedestal_three.png"
-dest_files=["res://.godot/imported/pedestal_three.png-b33b5a9e65540c28c0e88ede22eb0359.ctex"]
+source_file="res://assets/img/death_explosion.png"
+dest_files=["res://.godot/imported/death_explosion.png-883f6d27205b838b202fc196ea2fb231.ctex"]
 
 [params]
 

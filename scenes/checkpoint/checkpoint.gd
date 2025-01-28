@@ -2,7 +2,7 @@ extends Area2D
 
 signal entered_checkpoint
 
-func _process(delta):
+func _process(_delta):
 	if Globals.respawn_point != $RespawnPoint.global_position:
 		$AnimatedSprite2D.play("off")
 

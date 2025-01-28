@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rnh1b2uw78i2"
-path="res://.godot/imported/pedestal_two.png-3259a2ecdea3d2be371f1268ea900f54.ctex"
+uid="uid://bt8c3cn62d70n"
+path="res://.godot/imported/tileset.png-d5f5ea6efd04aef73927bdef5552d556.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/pedestal_two.png"
-dest_files=["res://.godot/imported/pedestal_two.png-3259a2ecdea3d2be371f1268ea900f54.ctex"]
+source_file="res://assets/img/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-d5f5ea6efd04aef73927bdef5552d556.ctex"]
 
 [params]
 

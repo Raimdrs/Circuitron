@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" path="res://scenes/music_loop_player.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/music_level.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/door/door.gd" id="3"]
-[ext_resource type="Texture2D" uid="uid://bwpwlyr4x51lk" path="res://assets/art/game/sprites/custom/door.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bwpwlyr4x51lk" path="res://assets/img/door.png" id="4"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 24)

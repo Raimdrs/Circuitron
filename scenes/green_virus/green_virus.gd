@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 @onready var current_direction := Vector2.RIGHT
 
-func _process(delta):
+func _process(_delta):
 	$AnimatedSprite2D.flip_h = current_direction == Vector2.LEFT
 
 func _physics_process(delta):
@@ -16,7 +16,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_wall_detector_body_entered(body):
+func _on_wall_detector_body_entered(_body):
 	if current_direction == Vector2.RIGHT:
 		current_direction = Vector2.LEFT
 	else:

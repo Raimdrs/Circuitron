@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://08mbhgvbgg04"
-path="res://.godot/imported/death_explosion.png-c43b678f29d9b12b28e54c0e4823faec.ctex"
+uid="uid://c7kk4yc23m2ix"
+path="res://.godot/imported/gate_nor.png-8af7c834462fb410350ae251767e29d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/death_explosion.png"
-dest_files=["res://.godot/imported/death_explosion.png-c43b678f29d9b12b28e54c0e4823faec.ctex"]
+source_file="res://assets/img/gate/gate_nor.png"
+dest_files=["res://.godot/imported/gate_nor.png-8af7c834462fb410350ae251767e29d4.ctex"]
 
 [params]
 

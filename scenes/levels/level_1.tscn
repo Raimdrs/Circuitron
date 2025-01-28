@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://u1q714ygtk2y" path="res://scenes/player/player.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://bunhwyfvgljtn" path="res://scenes/ui/pause/pause.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://scenes/gates/and/gate_and.tscn" id="12_h1ln7"]
-[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="13_ni5a2"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/font/Monocraft.ttc" id="13_ni5a2"]
 [ext_resource type="PackedScene" uid="uid://cajp6h3h0p3lh" path="res://scenes/gates/or/gate_or.tscn" id="13_w7hsy"]
 [ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint/checkpoint.tscn" id="14_evb1s"]
 [ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui/player_gui.tscn" id="15_cql7g"]

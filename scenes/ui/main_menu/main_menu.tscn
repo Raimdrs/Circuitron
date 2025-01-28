@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/ui/main_menu/main_menu.gd" id="1"]
 [ext_resource type="AudioStream" uid="uid://wah1l8k13uvt" path="res://assets/audio/music/menu_music.wav" id="2"]
-[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="3_ojfjh"]
-[ext_resource type="Texture2D" uid="uid://cl760rh0cvro5" path="res://assets/art/game/sprites/title.png" id="4_4yt06"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/font/Monocraft.ttc" id="3_ojfjh"]
+[ext_resource type="Texture2D" uid="uid://cl760rh0cvro5" path="res://assets/img/title.png" id="4_4yt06"]
 
 [sub_resource type="Theme" id="Theme_266lt"]
 default_font = ExtResource("3_ojfjh")

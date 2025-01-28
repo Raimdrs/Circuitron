@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkxg2xxm7c0uu"]
 
 [ext_resource type="Script" path="res://scenes/ui/_logo_final.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="2_ywyfu"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/font/Monocraft.ttc" id="2_ywyfu"]
 
 [sub_resource type="Theme" id="Theme_meinl"]
 default_font = ExtResource("2_ywyfu")

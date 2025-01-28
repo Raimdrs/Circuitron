@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://64tw7stfrueu"
-path="res://.godot/imported/gate_xnor.png-c2ce7d2b14322d464eaad77afae1ea23.ctex"
+uid="uid://rnh1b2uw78i2"
+path="res://.godot/imported/pedestal_two.png-b3829b27d04cafa3470501735d6e7a91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/gate_xnor.png"
-dest_files=["res://.godot/imported/gate_xnor.png-c2ce7d2b14322d464eaad77afae1ea23.ctex"]
+source_file="res://assets/img/pedestal_two.png"
+dest_files=["res://.godot/imported/pedestal_two.png-b3829b27d04cafa3470501735d6e7a91.ctex"]
 
 [params]
 

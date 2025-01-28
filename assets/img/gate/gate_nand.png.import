@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb2fvtmkyjrlr"
-path="res://.godot/imported/background.png-daff7a581135e6d65ba35308fb97c48e.ctex"
+uid="uid://gqd3okel05h4"
+path="res://.godot/imported/gate_nand.png-b950039ee80260bbbeb03c72306a9435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/background.png"
-dest_files=["res://.godot/imported/background.png-daff7a581135e6d65ba35308fb97c48e.ctex"]
+source_file="res://assets/img/gate/gate_nand.png"
+dest_files=["res://.godot/imported/gate_nand.png-b950039ee80260bbbeb03c72306a9435.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dh7175n3xgqlf"]
 
 [ext_resource type="Script" path="res://scenes/sign/sign.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://c1gvc34lii8wj" path="res://assets/art/game/sprites/industrial/industrial.v2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c1gvc34lii8wj" path="res://assets/img/industrial.v2.png" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 16)

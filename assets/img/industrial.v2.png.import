@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qfi8pxprb4ve"
-path="res://.godot/imported/green_virus.png-6be856854fdf9428ecb6917112e1bb4f.ctex"
+uid="uid://c1gvc34lii8wj"
+path="res://.godot/imported/industrial.v2.png-e2c878f2ad921791c140c92763da7e5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/green_virus.png"
-dest_files=["res://.godot/imported/green_virus.png-6be856854fdf9428ecb6917112e1bb4f.ctex"]
+source_file="res://assets/img/industrial.v2.png"
+dest_files=["res://.godot/imported/industrial.v2.png-e2c878f2ad921791c140c92763da7e5c.ctex"]
 
 [params]
 

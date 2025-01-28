@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bgtgbs23owj13"]
 
-[ext_resource type="Texture2D" uid="uid://buw5s42sfewp8" path="res://assets/art/game/sprites/custom/gate_not.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://buw5s42sfewp8" path="res://assets/img/gate/gate_not.png" id="1"]
 [ext_resource type="Script" path="res://scenes/gates/not/gate_not.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://1wfxsvyobdh" path="res://assets/audio/sfx/drop.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://cq7bx7jc1btc5" path="res://assets/audio/sfx/select.wav" id="5"]

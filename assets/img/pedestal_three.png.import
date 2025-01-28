@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwpwlyr4x51lk"
-path="res://.godot/imported/door.png-514354284e05ce2687befd22f5868884.ctex"
+uid="uid://cljvi61c2odbm"
+path="res://.godot/imported/pedestal_three.png-5ef11550a1292640f7a04d4ace463f59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/custom/door.png"
-dest_files=["res://.godot/imported/door.png-514354284e05ce2687befd22f5868884.ctex"]
+source_file="res://assets/img/pedestal_three.png"
+dest_files=["res://.godot/imported/pedestal_three.png-5ef11550a1292640f7a04d4ace463f59.ctex"]
 
 [params]
 

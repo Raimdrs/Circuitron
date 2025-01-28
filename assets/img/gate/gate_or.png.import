@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt8c3cn62d70n"
-path="res://.godot/imported/tileset.png-059f7f871857e0c30244e280515557ea.ctex"
+uid="uid://bna7kfbe0d1rh"
+path="res://.godot/imported/gate_or.png-1c77b2317a013fdc77593b7abcd34ab0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-059f7f871857e0c30244e280515557ea.ctex"]
+source_file="res://assets/img/gate/gate_or.png"
+dest_files=["res://.godot/imported/gate_or.png-1c77b2317a013fdc77593b7abcd34ab0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd2uf4w2x8onn"
-path="res://.godot/imported/checkpoint.png-83f0edb7d9e6be533048439d2e00c462.ctex"
+uid="uid://qfi8pxprb4ve"
+path="res://.godot/imported/green_virus.png-3cff4615f6493a630ddbc20202f069cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/checkpoint.png"
-dest_files=["res://.godot/imported/checkpoint.png-83f0edb7d9e6be533048439d2e00c462.ctex"]
+source_file="res://assets/img/green_virus.png"
+dest_files=["res://.godot/imported/green_virus.png-3cff4615f6493a630ddbc20202f069cd.ctex"]
 
 [params]
 

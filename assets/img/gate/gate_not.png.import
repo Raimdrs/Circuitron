@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gvc34lii8wj"
-path="res://.godot/imported/industrial.v2.png-7d78bcc1e2aef2c9dd88867dcac31585.ctex"
+uid="uid://buw5s42sfewp8"
+path="res://.godot/imported/gate_not.png-d8c5fe0f4ff32c0d5130f386f0574a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/game/sprites/industrial/industrial.v2.png"
-dest_files=["res://.godot/imported/industrial.v2.png-7d78bcc1e2aef2c9dd88867dcac31585.ctex"]
+source_file="res://assets/img/gate/gate_not.png"
+dest_files=["res://.godot/imported/gate_not.png-d8c5fe0f4ff32c0d5130f386f0574a8f.ctex"]
 
 [params]
 

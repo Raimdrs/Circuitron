@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b558a7qvb6fvj"]
 
-[ext_resource type="Texture2D" uid="uid://cljvi61c2odbm" path="res://assets/art/game/sprites/custom/pedestal_three.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cljvi61c2odbm" path="res://assets/img/pedestal_three.png" id="1"]
 [ext_resource type="Script" path="res://scenes/pedestals/pedestal_three_type_a.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://dk0tac3blbtd4" path="res://assets/art/game/sprites/custom/alert.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dk0tac3blbtd4" path="res://assets/img/alert.png" id="3"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(48, 28)

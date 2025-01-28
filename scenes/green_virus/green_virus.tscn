@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dj3mts7avw7q7"]
 
-[ext_resource type="Texture2D" uid="uid://qfi8pxprb4ve" path="res://assets/art/game/sprites/green_virus.png" id="1_1b60v"]
+[ext_resource type="Texture2D" uid="uid://qfi8pxprb4ve" path="res://assets/img/green_virus.png" id="1_1b60v"]
 [ext_resource type="Script" path="res://scenes/green_virus/green_virus.gd" id="1_wxtia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6wwrg"]
