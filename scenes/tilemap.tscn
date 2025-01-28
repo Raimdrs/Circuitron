@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://riso1cwgchhr"]
+[gd_scene load_steps=6 format=3 uid="uid://riso1cwgchhr"]
 
 [ext_resource type="Texture2D" uid="uid://bt8c3cn62d70n" path="res://assets/art/game/sprites/tileset.png" id="1_xatci"]
+[ext_resource type="PackedScene" uid="uid://cuhvesbvgmn17" path="res://spike.tscn" id="2_rikca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxw60"]
 texture = ExtResource("1_xatci")
@@ -429,6 +430,9 @@ texture = ExtResource("1_xatci")
 1:8/0 = 0
 1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3, -8, -3)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_nj76k"]
+scenes/1/scene = ExtResource("2_rikca")
+
 [sub_resource type="TileSet" id="TileSet_fl33f"]
 physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
@@ -438,6 +442,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Slopes"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_oxw60")
+sources/1 = SubResource("TileSetScenesCollectionSource_nj76k")
 
 [node name="Tilemap" type="TileMapLayer"]
 tile_set = SubResource("TileSet_fl33f")
