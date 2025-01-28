@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cnul061t617fs"]
+[gd_scene load_steps=18 format=4 uid="uid://cnul061t617fs"]
 
 [ext_resource type="PackedScene" uid="uid://bgtgbs23owj13" path="res://scenes/gates/not/gate_not.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://b1f7dphaduayt" path="res://scenes/pedestals/pedestal_two_type_a.tscn" id="2"]
@@ -12,9 +12,14 @@
 [ext_resource type="TileSet" path="res://scenes/wire/wire_activated.tres" id="11"]
 [ext_resource type="TileSet" uid="uid://do45h5yqe64i7" path="res://assets/art/game/tileset/game.tres" id="12"]
 [ext_resource type="PackedScene" path="res://scenes/gates/and/gate_and.tscn" id="12_h1ln7"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="13_ni5a2"]
 [ext_resource type="PackedScene" uid="uid://cajp6h3h0p3lh" path="res://scenes/gates/or/gate_or.tscn" id="13_w7hsy"]
 [ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint.tscn" id="14_evb1s"]
 [ext_resource type="PackedScene" uid="uid://dt1bf3j0fg2co" path="res://scenes/player_gui/player_gui.tscn" id="15_cql7g"]
+
+[sub_resource type="Theme" id="Theme_bd8dm"]
+default_font = ExtResource("13_ni5a2")
+default_font_size = 9
 
 [node name="Level1" type="Node"]
 
@@ -68,14 +73,20 @@ position = Vector2(-240, -40)
 previous = NodePath("../Signs/sign")
 
 [node name="Panel" parent="dialog_text" index="0"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 41.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" parent="dialog_text" index="1"]
-offset_right = 242.0
+offset_right = 236.0
 offset_bottom = 38.0
-text = ""
+theme = SubResource("Theme_bd8dm")
+text = "Teste teste teste teste teste teste
+teste teste teste teste teste teste 
+teste teste teste teste teste teste "
 horizontal_alignment = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Signs" type="Node" parent="."]
 
@@ -91,11 +102,96 @@ position = Vector2(1609, 392)
 [node name="sign5" parent="Signs" instance=ExtResource("7")]
 position = Vector2(1490, 216)
 
+[node name="sign6" parent="Signs" instance=ExtResource("7")]
+position = Vector2(1651, 392)
+
 [node name="PlayerGUI" parent="." instance=ExtResource("15_cql7g")]
 
 [node name="pause" parent="." instance=ExtResource("9")]
+
+[node name="dialog_text2" parent="." instance=ExtResource("3")]
+position = Vector2(-240, -40)
+previous = NodePath("../Signs/sign5")
+
+[node name="Panel" parent="dialog_text2" index="0"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 41.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="dialog_text2" index="1"]
+offset_right = 236.0
+offset_bottom = 38.0
+theme = SubResource("Theme_bd8dm")
+text = "Explore!!!"
+horizontal_alignment = 3
+
+[node name="dialog_text3" parent="." instance=ExtResource("3")]
+position = Vector2(-240, -40)
+previous = NodePath("../Signs/sign4")
+
+[node name="Panel" parent="dialog_text3" index="0"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 41.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="dialog_text3" index="1"]
+offset_right = 239.0
+offset_bottom = 38.0
+theme = SubResource("Theme_bd8dm")
+text = "A porta AND só acende a luz de saída 
+se todas as luzes de 
+entrada estiverem acesas"
+horizontal_alignment = 3
+
+[node name="dialog_text4" parent="." instance=ExtResource("3")]
+position = Vector2(-240, -40)
+previous = NodePath("../Signs/sign6")
+
+[node name="Panel" parent="dialog_text4" index="0"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 41.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="dialog_text4" index="1"]
+offset_right = 239.0
+offset_bottom = 38.0
+theme = SubResource("Theme_bd8dm")
+text = "A porta NOT inverte a luz de entrada: 
+se estiver acesa, a saída apaga; 
+se estiver apagada, a saída acende."
+horizontal_alignment = 3
+
+[node name="dialog_text5" parent="." instance=ExtResource("3")]
+position = Vector2(-240, -40)
+previous = NodePath("../Signs/sign2")
+
+[node name="Panel" parent="dialog_text5" index="0"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 41.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="dialog_text5" index="1"]
+offset_right = 239.0
+offset_bottom = 38.0
+theme = SubResource("Theme_bd8dm")
+text = "A porta OR acende a luz de saída se 
+pelo menos uma das
+ luzes de entrada estiver acesa"
+horizontal_alignment = 3
 
 [connection signal="area_entered" from="Checkpoint2" to="player" method="_on_checkpoint_area_entered"]
 [connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]
 
 [editable path="dialog_text"]
+[editable path="dialog_text2"]
+[editable path="dialog_text3"]
+[editable path="dialog_text4"]
+[editable path="dialog_text5"]
