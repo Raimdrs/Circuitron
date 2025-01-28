@@ -78,7 +78,7 @@ visible = false
 
 [node name="Checkpoint2" parent="." instance=ExtResource("1_i20of")]
 visible = false
-position = Vector2(61, 218)
+position = Vector2(66, 205)
 
 [connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]
 [connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]
