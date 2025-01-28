@@ -65,3 +65,7 @@ func _on_damage_area_body_entered(_body):
 
 func _on_checkpoint_entered_checkpoint(pos):
 	Globals.respawn_point = pos
+
+
+func _on_checkpoint_2_entered_checkpoint() -> void:
+	pass # Replace with function body.
