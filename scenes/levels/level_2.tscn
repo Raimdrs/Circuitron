@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=4 uid="uid://kglqatu4xdk3"]
+[gd_scene load_steps=13 format=4 uid="uid://kglqatu4xdk3"]
 
-[ext_resource type="PackedScene" uid="uid://cafdk861xrvb4" path="res://scenes/background.tscn" id="1_f6nsf"]
 [ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint/checkpoint.tscn" id="2_8fcyd"]
 [ext_resource type="PackedScene" uid="uid://bgtgbs23owj13" path="res://scenes/gates/not/gate_not.tscn" id="3_offga"]
 [ext_resource type="PackedScene" uid="uid://b42urip24pc51" path="res://scenes/door/door.tscn" id="4_7a5ra"]
@@ -16,8 +15,12 @@
 
 [node name="Level2" type="Node2D"]
 
-[node name="background" parent="." instance=ExtResource("1_f6nsf")]
-follow_viewport_enabled = true
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -362.0
+offset_top = -514.0
+offset_right = 2331.0
+offset_bottom = 1211.0
+color = Color(0.113725, 0.129412, 0.172549, 1)
 
 [node name="Node2D" type="Node2D" parent="."]
 
