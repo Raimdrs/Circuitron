@@ -26,7 +26,7 @@ offset_left = -362.0
 offset_top = -514.0
 offset_right = 2331.0
 offset_bottom = 1211.0
-color = Color(0.113725, 0.129412, 0.172549, 1)
+color = Color(0.054902, 0.137255, 0.203922, 1)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("14_evb1s")]
 position = Vector2(1406, 212)

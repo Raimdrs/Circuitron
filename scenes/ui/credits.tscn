@@ -28,7 +28,7 @@ script = ExtResource("2")
 layout_mode = 0
 offset_right = 1919.0
 offset_bottom = 1078.0
-color = Color(0.113725, 0.129412, 0.172549, 1)
+color = Color(0.054902, 0.137255, 0.203922, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="_credits"]
 layout_direction = 1

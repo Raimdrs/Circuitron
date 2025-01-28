@@ -14,3 +14,7 @@ func _on_body_entered(_body):
 
 func _on_entered_checkpoint() -> void:
 	pass # Replace with function body.
+
+
+func _on_checkpoint_2_entered() -> void:
+	pass # Replace with function body.

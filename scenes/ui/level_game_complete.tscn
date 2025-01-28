@@ -25,7 +25,7 @@ autostart = true
 layout_mode = 0
 offset_right = 1932.0
 offset_bottom = 1097.0
-color = Color(0.113725, 0.129412, 0.172549, 1)
+color = Color(0.054902, 0.137255, 0.203922, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="_logo"]
 layout_mode = 0

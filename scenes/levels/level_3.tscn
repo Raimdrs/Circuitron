@@ -22,7 +22,7 @@ offset_left = -362.0
 offset_top = -514.0
 offset_right = 2331.0
 offset_bottom = 1211.0
-color = Color(0.113725, 0.129412, 0.172549, 1)
+color = Color(0.054902, 0.137255, 0.203922, 1)
 
 [node name="Gates" type="Node2D" parent="."]
 
@@ -76,4 +76,9 @@ position = Vector2(1240, 264)
 [node name="pause" parent="." instance=ExtResource("7_mo8tw")]
 visible = false
 
+[node name="Checkpoint2" parent="." instance=ExtResource("1_i20of")]
+visible = false
+position = Vector2(61, 218)
+
 [connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]
+[connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]
