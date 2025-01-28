@@ -91,9 +91,9 @@ position = Vector2(1609, 392)
 [node name="sign5" parent="Signs" instance=ExtResource("7")]
 position = Vector2(1490, 216)
 
-[node name="pause" parent="." instance=ExtResource("9")]
-
 [node name="PlayerGUI" parent="." instance=ExtResource("15_cql7g")]
+
+[node name="pause" parent="." instance=ExtResource("9")]
 
 [connection signal="area_entered" from="Checkpoint2" to="player" method="_on_checkpoint_area_entered"]
 [connection signal="entered_checkpoint" from="Checkpoint2" to="player" method="_on_checkpoint_entered_checkpoint"]

@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkxg2xxm7c0uu"]
+[gd_scene load_steps=4 format=3 uid="uid://dkxg2xxm7c0uu"]
 
 [ext_resource type="Script" path="res://scenes/ui/_logo_final.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://cn0lkyq3kf1ap" path="res://assets/tema/fontes/Monocraft.ttc" id="2_ywyfu"]
+
+[sub_resource type="Theme" id="Theme_meinl"]
+default_font = ExtResource("2_ywyfu")
+default_font_size = 63
 
 [node name="logo" type="CanvasLayer"]
 
@@ -18,21 +23,26 @@ autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="_logo"]
 layout_mode = 0
-offset_right = 426.0
-offset_bottom = 240.0
+offset_right = 1932.0
+offset_bottom = 1097.0
 color = Color(0.113725, 0.129412, 0.172549, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="_logo"]
 layout_mode = 0
-offset_right = 424.0
-offset_bottom = 184.0
+offset_right = 1923.0
+offset_bottom = 1079.0
 
 [node name="Label" type="Label" parent="_logo/CenterContainer"]
 layout_mode = 2
+theme = SubResource("Theme_meinl")
 text = "Parabéns! 
+
 Todas as portas lógicas foram instaladas... 
-Parece que esse é o fim...
+
+Parece que esse é o fim de nossa Beta...
+
 Obrigado por jogar.
+
 "
 horizontal_alignment = 1
 

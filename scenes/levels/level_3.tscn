@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://t6vcs6fp3hyx"]
+[gd_scene load_steps=17 format=4 uid="uid://t6vcs6fp3hyx"]
 
 [ext_resource type="PackedScene" uid="uid://daqfm0ltxbt0i" path="res://scenes/checkpoint.tscn" id="1_i20of"]
 [ext_resource type="PackedScene" uid="uid://cafdk861xrvb4" path="res://scenes/background.tscn" id="1_w106d"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bunhwyfvgljtn" path="res://scenes/ui/pause/pause.tscn" id="7_mo8tw"]
 [ext_resource type="PackedScene" uid="uid://d32740mw5glrv" path="res://door_gate.tscn" id="8_g5o5m"]
 [ext_resource type="PackedScene" uid="uid://b558a7qvb6fvj" path="res://scenes/pedestals/pedestal_three_type_a.tscn" id="8_y8jbt"]
+[ext_resource type="PackedScene" uid="uid://dkxg2xxm7c0uu" path="res://scenes/ui/level_game_complete.tscn" id="10_dmwyl"]
 [ext_resource type="PackedScene" uid="uid://cajp6h3h0p3lh" path="res://scenes/gates/or/gate_or.tscn" id="10_k1btf"]
 [ext_resource type="PackedScene" path="res://scenes/gates/and/gate_and.tscn" id="11_swswy"]
 [ext_resource type="PackedScene" uid="uid://bgtgbs23owj13" path="res://scenes/gates/not/gate_not.tscn" id="11_wuduq"]
@@ -50,6 +51,7 @@ position = Vector2(65, 195)
 [node name="door" parent="." instance=ExtResource("4_tp2h5")]
 position = Vector2(1151, 240)
 previous = NodePath("../pedestal_two_type_a")
+destination = ExtResource("10_dmwyl")
 
 [node name="DoorGate" parent="." instance=ExtResource("8_g5o5m")]
 position = Vector2(952, 248)
@@ -73,8 +75,8 @@ input = false
 [node name="GreenVirus" parent="." instance=ExtResource("13_q1ix3")]
 position = Vector2(1240, 264)
 
-[node name="pause" parent="." instance=ExtResource("7_mo8tw")]
-
 [node name="PlayerGUI" parent="." instance=ExtResource("15_6xh3d")]
+
+[node name="pause" parent="." instance=ExtResource("7_mo8tw")]
 
 [connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]

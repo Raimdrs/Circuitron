@@ -102,8 +102,8 @@ position = Vector2(45, 167)
 [node name="pedestal_three_type_a" parent="." groups=["pedestal"] instance=ExtResource("7_g7sg6")]
 position = Vector2(1200, 88)
 
-[node name="pause" parent="." instance=ExtResource("13_ow2ef")]
-
 [node name="PlayerGUI" parent="." instance=ExtResource("14_m3aai")]
+
+[node name="pause" parent="." instance=ExtResource("13_ow2ef")]
 
 [connection signal="entered_checkpoint" from="Checkpoint" to="player" method="_on_checkpoint_entered_checkpoint"]
