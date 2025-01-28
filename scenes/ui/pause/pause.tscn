@@ -16,50 +16,62 @@ default_font_size = 50
 [node name="pause" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1")
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="pause"]
-layout_mode = 0
-offset_right = 1921.0
-offset_bottom = 1085.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.392157)
+metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="pause"]
-layout_mode = 0
-offset_left = 528.0
-offset_top = 59.0
-offset_right = 1278.0
-offset_bottom = 184.0
+[node name="MarginContainer" type="MarginContainer" parent="pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 200
 
-[node name="Label" type="Label" parent="pause/CenterContainer"]
+[node name="Label" type="Label" parent="pause/MarginContainer"]
 layout_direction = 1
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 theme = SubResource("Theme_a2v30")
 text = "Menu de pausa"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="pause"]
+[node name="VBoxContainer" type="VBoxContainer" parent="pause/MarginContainer"]
 light_mask = -2147483647
-layout_mode = 0
-offset_left = 470.0
-offset_top = 430.0
-offset_right = 1468.0
-offset_bottom = 870.0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = SubResource("Theme_s0xvx")
 theme_override_constants/separation = 50
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="retomar" type="Button" parent="pause/VBoxContainer"]
+[node name="retomar" type="Button" parent="pause/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Retomar partida"
+text = "Retomar Partida"
 
-[node name="menu" type="Button" parent="pause/VBoxContainer"]
+[node name="menu" type="Button" parent="pause/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Voltar ao menu principal"
+text = "Voltar ao Menu"
 
-[connection signal="pressed" from="pause/VBoxContainer/retomar" to="pause" method="_on_retomar_pressed"]
-[connection signal="pressed" from="pause/VBoxContainer/menu" to="pause" method="_on_menu_pressed"]
+[connection signal="pressed" from="pause/MarginContainer/VBoxContainer/retomar" to="pause" method="_on_retomar_pressed"]
+[connection signal="pressed" from="pause/MarginContainer/VBoxContainer/menu" to="pause" method="_on_menu_pressed"]
