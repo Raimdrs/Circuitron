@@ -78,15 +78,13 @@ offset_bottom = 41.0
 offset_right = 236.0
 offset_bottom = 38.0
 theme = SubResource("Theme_bd8dm")
-text = "Teste Teste Teste Teste Teste Teste 
-Teste Teste Teste Teste Teste Teste 
-Teste Teste Teste Teste Teste Teste "
+text = "Está é uma placa ela explica o jogo!"
 justification_flags = 0
 
 [node name="Signs" type="Node" parent="."]
 
 [node name="sign" parent="Signs" instance=ExtResource("7")]
-position = Vector2(40, 216)
+position = Vector2(176, 217)
 
 [node name="sign2" parent="Signs" instance=ExtResource("7")]
 position = Vector2(1776, 136)
@@ -105,7 +103,6 @@ position = Vector2(1651, 392)
 [node name="pause" parent="." instance=ExtResource("9")]
 
 [node name="dialog_text2" parent="." instance=ExtResource("3")]
-visible = false
 position = Vector2(-240, -40)
 previous = NodePath("../Signs/sign5")
 
@@ -124,7 +121,6 @@ text = "Explore!!!"
 justification_flags = 0
 
 [node name="dialog_text3" parent="." instance=ExtResource("3")]
-visible = false
 position = Vector2(-240, -40)
 previous = NodePath("../Signs/sign4")
 
@@ -145,7 +141,6 @@ acesas"
 justification_flags = 0
 
 [node name="dialog_text4" parent="." instance=ExtResource("3")]
-visible = false
 position = Vector2(-240, -40)
 previous = NodePath("../Signs/sign6")
 
@@ -165,7 +160,6 @@ apagada, a saída acende."
 justification_flags = 0
 
 [node name="dialog_text5" parent="." instance=ExtResource("3")]
-visible = false
 position = Vector2(-240, -40)
 previous = NodePath("../Signs/sign2")
 
