@@ -57,6 +57,11 @@ func _on_animated_sprite_2d_animation_finished():
 			position = Globals.respawn_point
 			animated_sprite.play("idle")
 			alive = true
+			can_pick = true
+			var gates = get_node("../Gates")
+			for gate in gates.get_children():
+				if gate.picked:
+					gate.reset();
 
 # Função chamada ao entrar em uma área de dano
 func _on_damage_area_body_entered(_body):

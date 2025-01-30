@@ -1,6 +1,7 @@
 class_name gate
 extends RigidBody2D
 
+var initial_position: Vector2
 var picked = false
 var pedestal_dock
 var pedestal_nodes
@@ -12,6 +13,7 @@ var button
 @onready var animation_player = $animation
 
 func _ready():
+	initial_position = global_position
 	gates = get_tree().get_nodes_in_group("gate")
 	pedestal_nodes = get_tree().get_nodes_in_group("pedestal")
 	pedestal_dock = pedestal_nodes[0].get_node("Marker2D").global_position
@@ -69,3 +71,9 @@ func anim_switch(animation):
 	var new_anim = str(animation)
 	if animation_player.current_animation != new_anim:
 		animation_player.play(new_anim)
+
+func reset():
+	self.global_position = self.initial_position
+	picked = false
+	droped = false
+	button = false
